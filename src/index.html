@@ -5,6 +5,13 @@
     <title>Country Information - Country searcher</title>
 </head>
 <body>
-
+<form action="./app.js" id="search-form">
+    <label for="search-field">Search</label>
+    <input type="text" name="search" id="search-field">
+    <button type="submit" id="button">Send</button>
+    <section id="countries"></section>
+</form>
+<section id="search-result"></section>
+<script type="module" src="app.js"></script>
 </body>
 </html>
