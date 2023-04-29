@@ -84,7 +84,7 @@ async function fetchLanguages(fetchedCountry) {
 async function constructSearchResult(fetchedCountry) {
 
     // primes output location
-    const outputField = document.getElementById('search-result');
+    const outputField = document.getElementById('search-result-field');
     // removes the previous print backs
     outputField.innerHTML = ''
     errorField.innerHTML = ''
@@ -102,7 +102,7 @@ async function constructSearchResult(fetchedCountry) {
         const flag = document.createElement('img');
         const flagTitleWrapper = document.createElement('div');
         const flagWrapper = document.createElement('div');
-        const countryTitle = document.createElement('h2');
+        const countryTitle = document.createElement('h3');
         const pTagOne = document.createElement('p');
         const pTagTwo = document.createElement('p');
         const languageTag = document.createElement('p');
@@ -111,7 +111,7 @@ async function constructSearchResult(fetchedCountry) {
         // if it has no official results it has null
         if (subRegion === null) {
             pTagOne.innerText =
-                `${commonName} is situated in (the) ${region} and has no subregion. it has a population of ${population} people.`
+                `${commonName} is situated in (the) ${region} and has no subregion. It has a population of ${population} people.`
         } else {
             pTagOne.innerText =
                 `${commonName} is situated in ${subRegion}. it has a population of ${population} people.`
@@ -143,7 +143,7 @@ async function constructSearchResult(fetchedCountry) {
             pTagTwo.innerText +=
                 ` and you can pay with the ${currencyArray.slice(0, -1).join(', ')} and the ${currencyArray.slice(-1)}.`
         } else {
-            pTagTwo.innerText += ` and you can pay with the ${currencyArray[0]}.`;
+            pTagTwo.innerText += ` And you can pay with the ${currencyArray[0]}.`;
         }
 
         if (languageArray === null) {
@@ -161,6 +161,7 @@ async function constructSearchResult(fetchedCountry) {
         flag.setAttribute('class', 'flag');
         flagWrapper.setAttribute('class', 'flag-wrapper');
         countryTitle.setAttribute('class', 'country-title');
+        flagTitleWrapper.setAttribute('class', 'flag-title-wrapper')
         pTagOne.setAttribute('class', 'region-p');
         pTagTwo.setAttribute('class', 'capital-p');
         languageTag.setAttribute('class', 'language-p');

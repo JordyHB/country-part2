@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Country Information - Country searcher</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<form action="./app.js" id="search-form">
-    <label for="search-field">Search</label>
-    <input type="text" name="search" id="search-field">
-    <button type="submit" id="button">Send</button>
-    <section id="countries"></section>
-</form>
-<p id="error-field"></p>
-<section id="search-result"></section>
+<header>
+    <h1>Let's search some countries</h1>
+    <img class="globe-gif" src="./assets/spinning-globe.gif" alt="spinning globe">
+</header>
+<main>
+
+    <form action="./app.js" id="search-form">
+        <label for="search-field"></label>
+        <input
+                type="text"
+                class="text-input-bar"
+                name="search"
+                id="search-field"
+                placeholder="e.g Netherlands or Peru"
+        />
+        <button class="search-button" type="submit" id="button">Search</button>
+        <section id="countries"></section>
+    </form>
+    <p id="error-field" class="error-message"></p>
+    <section class="search-result-field" id="search-result-field">
+<!--        empty for virtual dom elements-->
+    </section>
+</main>
 <script type="module" src="app.js"></script>
 </body>
 </html>

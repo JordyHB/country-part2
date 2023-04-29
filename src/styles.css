@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+    4. Areas
+        4.1 Header
+        4.2 search bar
+        4.3 country tile
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    font-size: clamp(12px, 1.5vw, 16px)
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: clamp(2.5rem, 3.5vw, 8rem);
+}
+
+h3 {
+    font-size: clamp(2rem, 2.5vw, 2.75rem);
+    font-family: 'Kaushan Script', cursive;
+}
+
+.text-input-bar {
+    font-size: 1rem;
+    font-family: 'poppins', sans-serif;
+}
+
+.search-button {
+    font-size: 1rem;
+    font-family: 'poppins', sans-serif;
+}
+
+/* ------------------------------- 3. Layout ----------------------------------------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ------------------------------- 4. areas ------------------------------------------ */
+
+/*---------------------------- 4.1 header --------------------------*/
+
+h1 {
+    margin: 3rem 0.5rem 2rem 0.5rem;
+}
+
+.globe-gif {
+    margin-bottom: 1rem;
+}
+
+/*---------------------------- 4.2 search-bar  --------------------------*/
+
+.text-input-bar {
+    padding: 0.25rem 4.5rem 0.25rem 0.75rem;
+    border: gray 1px solid;
+    border-radius: 4px 0 0 4px;
+
+}
+
+.search-button {
+    background: yellowgreen;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    border: yellowgreen 1px solid;
+    border-radius: 0 4px 4px 0;
+    margin-left: -0.75rem;
+}
+
+/*---------------------------- 4.3 search-result  --------------------------*/
+
+.search-result-field {
+    margin: 3rem 0.5rem 3rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-result {
+    margin: 3rem 0.5rem 3rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: 2px 5px 16px 0 rgba(0,0,0,0.75);
+    border-radius: 4px;
+}
+
+.flag-title-wrapper {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: lightgray 1px solid;
+}
+
+.flag-wrapper {
+    flex: 1 1 auto;
+    max-width: 12%;
+    margin-right: 1rem;
+}
+
+.flag {
+    height: 100%;
+    max-width: 100%;
+}
+
+.country-title {
+    flex: 1 1 auto;
+}
+
+.search-result p {
+    margin: 0.25rem 0;
+}
+
+
+/*---------------------------- 4.3 error  --------------------------*/
+
+.error-message {
+    padding: 2rem;
+    color: red;
+}
